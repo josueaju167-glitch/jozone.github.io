@@ -1,25 +1,147 @@
-* { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Inter', sans-serif; }
-body { background-color: #f9f9f9; color: #333; scroll-behavior: smooth; }
+* { 
+    margin: 0; 
+    padding: 0; 
+    box-sizing: border-box; 
+    font-family: 'Inter', sans-serif; 
+}
 
-nav { display: flex; justify-content: space-between; padding: 2rem 10%; align-items: center; }
-nav ul { display: flex; list-style: none; }
+body { 
+    background-color: #f9f9f9; 
+    color: #333; 
+    line-height: 1.6;
+    scroll-behavior: smooth; 
+}
+
+/* Navegación */
+nav { 
+    display: flex; 
+    justify-content: space-between; 
+    padding: 2rem 10%; 
+    align-items: center; 
+    background: white;
+}
+
+.logo { 
+    font-weight: 700; 
+    font-size: 1.5rem; 
+    letter-spacing: 1px; 
+}
+
+nav ul { 
+    display: flex; 
+    list-style: none; 
+}
+
 nav ul li { margin-left: 20px; }
-nav ul li a { text-decoration: none; color: #333; font-weight: 700; }
+nav ul li a { text-decoration: none; color: #333; font-weight: 600; }
 
-.hero { text-align: center; padding: 100px 10%; }
-.hero h1 { font-size: 3rem; margin-bottom: 20px; }
+/* Sección Principal (Hero) */
+.hero { 
+    text-align: center; 
+    padding: 80px 10%; 
+}
+
+.hero h1 { 
+    font-size: 2.5rem; 
+    margin-bottom: 20px; 
+    line-height: 1.2;
+}
+
 .hero span { color: #007bff; }
-.btn-primary { background: #333; color: white; padding: 15px 30px; text-decoration: none; border-radius: 50px; display: inline-block; margin-top: 20px; }
 
-#portafolio { padding: 80px 10%; background: white; }
-.galeria { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; margin-top: 40px; }
-.socialmedia.jpg { width: 100%; border-radius: 10px; transition: 0.3s; }
-.logo.jpg:hover { transform: scale(1.05); }
+.btn-primary { 
+    background: #333; 
+    color: white; 
+    padding: 15px 30px; 
+    text-decoration: none; 
+    border-radius: 50px; 
+    display: inline-block; 
+    margin-top: 20px;
+    transition: 0.3s;
+}
 
-#cotizar { padding: 80px 10%; background: #f0f0f0; }
-.contenedor-formulario { max-width: 600px; margin: 0 auto; text-align: center; }
-form { display: flex; flex-direction: column; gap: 15px; margin-top: 30px; }
-input, select, textarea { padding: 15px; border: 1px solid #ddd; border-radius: 8px; }
-.btn-submit { background: #007bff; color: white; border: none; padding: 15px; border-radius: 8px; cursor: pointer; font-weight: bold; }
+.btn-primary:hover { background: #007bff; }
 
-footer { text-align: center; padding: 40px; font-size: 0.9rem; color: #888; }
+/* Portafolio - Aquí arreglamos el tamaño de tus fotos */
+#portafolio { 
+    padding: 60px 10%; 
+    background: white; 
+    text-align: center;
+}
+
+.galeria { 
+    display: grid; 
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
+    gap: 25px; 
+    margin-top: 40px; 
+}
+
+.proyecto {
+    background: #eee;
+    border-radius: 12px;
+    overflow: hidden;
+    height: 300px; /* Altura fija para que todas se vean iguales */
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+.proyecto img { 
+    width: 100%; 
+    height: 100%; 
+    object-fit: cover; /* Esto evita que se estiren las fotos */
+    transition: transform 0.4s ease;
+}
+
+.proyecto img:hover { 
+    transform: scale(1.1); 
+}
+
+/* Formulario de Cotización */
+#cotizar { 
+    padding: 80px 10%; 
+    background: #f0f0f0; 
+}
+
+.contenedor-formulario { 
+    max-width: 500px; 
+    margin: 0 auto; 
+    text-align: center; 
+}
+
+form { 
+    display: flex; 
+    flex-direction: column; 
+    gap: 15px; 
+    margin-top: 30px; 
+}
+
+input, select, textarea { 
+    padding: 12px; 
+    border: 1px solid #ccc; 
+    border-radius: 8px; 
+    font-size: 1rem;
+}
+
+.btn-submit { 
+    background: #007bff; 
+    color: white; 
+    border: none; 
+    padding: 15px; 
+    border-radius: 8px; 
+    cursor: pointer; 
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+/* Footer */
+footer { 
+    text-align: center; 
+    padding: 40px; 
+    background: white;
+    font-size: 0.9rem; 
+}
+
+/* Responsive (Para Celulares) */
+@media (max-width: 768px) {
+    .hero h1 { font-size: 1.8rem; }
+    nav { flex-direction: column; gap: 15px; }
+}
