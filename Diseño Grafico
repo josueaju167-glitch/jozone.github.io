@@ -1,0 +1,83 @@
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tu Nombre | Diseñador Gráfico</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header>
+        <nav>
+            <div class="logo">TU LOGO</div>
+            <ul>
+                <li><a href="#portafolio">Portafolio</a></li>
+                <li><a href="#cotizar">Cotizar</a></li>
+            </ul>
+        </nav>
+        <div class="hero">
+            <h1>Diseño que comunica, <br><span>resultados que impactan.</span></h1>
+            <p>Especialista en branding y contenido digital para marcas en Guatemala.</p>
+            <a href="#cotizar" class="btn-primary">Solicitar Cotización</a>
+        </div>
+    </header>
+
+    <section id="portafolio">
+        <h2>Mi Portafolio</h2>
+        <div class="galeria">
+            <div class="proyecto"><img src="proyecto1.jpg" alt="Logo Design"></div>
+            <div class="proyecto"><img src="proyecto2.jpg" alt="Social Media"></div>
+            <div class="proyecto"><img src="proyecto3.jpg" alt="Branding"></div>
+        </div>
+    </section>
+
+    <section id="cotizar">
+        <div class="contenedor-formulario">
+            <h2>¿Tienes un proyecto en mente?</h2>
+            <p>Llena los datos y te enviaré una propuesta personalizada.</p>
+            <form action="https://formspree.io/f/TU_ID_AQUÍ" method="POST">
+                <input type="text" name="nombre" placeholder="Tu Nombre" required>
+                <input type="email" name="email" placeholder="Tu Correo" required>
+                <select name="servicio">
+                    <option value="logo">Diseño de Logotipo</option>
+                    <option value="redes">Redes Sociales</option>
+                    <option value="otro">Otro Proyecto</option>
+                </select>
+                <textarea name="mensaje" placeholder="Cuéntame sobre tu proyecto..." required></textarea>
+                <button type="submit" class="btn-submit">Enviar Cotización</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Tu Nombre | Diseñador Gráfico</p>
+    </footer>
+
+</body>
+</html>
+* { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Inter', sans-serif; }
+body { background-color: #f9f9f9; color: #333; scroll-behavior: smooth; }
+
+nav { display: flex; justify-content: space-between; padding: 2rem 10%; align-items: center; }
+nav ul { display: flex; list-style: none; }
+nav ul li { margin-left: 20px; }
+nav ul li a { text-decoration: none; color: #333; font-weight: 700; }
+
+.hero { text-align: center; padding: 100px 10%; }
+.hero h1 { font-size: 3rem; margin-bottom: 20px; }
+.hero span { color: #007bff; }
+.btn-primary { background: #333; color: white; padding: 15px 30px; text-decoration: none; border-radius: 50px; display: inline-block; margin-top: 20px; }
+
+#portafolio { padding: 80px 10%; background: white; }
+.galeria { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; margin-top: 40px; }
+.proyecto img { width: 100%; border-radius: 10px; transition: 0.3s; }
+.proyecto img:hover { transform: scale(1.05); }
+
+#cotizar { padding: 80px 10%; background: #f0f0f0; }
+.contenedor-formulario { max-width: 600px; margin: 0 auto; text-align: center; }
+form { display: flex; flex-direction: column; gap: 15px; margin-top: 30px; }
+input, select, textarea { padding: 15px; border: 1px solid #ddd; border-radius: 8px; }
+.btn-submit { background: #007bff; color: white; border: none; padding: 15px; border-radius: 8px; cursor: pointer; font-weight: bold; }
+
+footer { text-align: center; padding: 40px; font-size: 0.9rem; color: #888; }
