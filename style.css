@@ -1,147 +1,133 @@
+/* Importar Montserrat desde Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700;900&display=swap');
+
 * { 
     margin: 0; 
     padding: 0; 
     box-sizing: border-box; 
-    font-family: 'Inter', sans-serif; 
+    font-family: 'Montserrat', sans-serif; 
 }
 
 body { 
-    background-color: #f9f9f9; 
-    color: #333; 
+    background-color: #0a0a0a; /* Fondo oscuro para resaltar */
+    color: #ffffff; 
     line-height: 1.6;
     scroll-behavior: smooth; 
 }
 
-/* Navegación */
+/* Navegación con estilo */
 nav { 
     display: flex; 
     justify-content: space-between; 
-    padding: 2rem 10%; 
+    padding: 1.5rem 10%; 
     align-items: center; 
-    background: white;
+    background: rgba(0, 0, 0, 0.9);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
 
 .logo { 
-    font-weight: 700; 
-    font-size: 1.5rem; 
-    letter-spacing: 1px; 
+    font-weight: 900; 
+    font-size: 1.8rem; 
+    letter-spacing: -1px;
+    color: #00d4ff; /* Azul Neón */
 }
 
-nav ul { 
-    display: flex; 
-    list-style: none; 
-}
+nav ul { display: flex; list-style: none; }
+nav ul li { margin-left: 25px; }
+nav ul li a { text-decoration: none; color: #fff; font-weight: 400; transition: 0.3s; }
+nav ul li a:hover { color: #00d4ff; }
 
-nav ul li { margin-left: 20px; }
-nav ul li a { text-decoration: none; color: #333; font-weight: 600; }
-
-/* Sección Principal (Hero) */
+/* Hero Section Impactante */
 .hero { 
     text-align: center; 
-    padding: 80px 10%; 
+    padding: 120px 10%; 
+    background: radial-gradient(circle, #1a1a1a 0%, #0a0a0a 100%);
 }
 
 .hero h1 { 
-    font-size: 2.5rem; 
+    font-size: 3.5rem; 
+    font-weight: 900;
     margin-bottom: 20px; 
-    line-height: 1.2;
+    text-transform: uppercase;
 }
 
-.hero span { color: #007bff; }
+.hero span { color: #00d4ff; }
 
 .btn-primary { 
-    background: #333; 
-    color: white; 
-    padding: 15px 30px; 
+    background: #00d4ff; 
+    color: #000; 
+    padding: 18px 40px; 
     text-decoration: none; 
-    border-radius: 50px; 
+    border-radius: 5px; 
     display: inline-block; 
-    margin-top: 20px;
-    transition: 0.3s;
+    font-weight: 700;
+    margin-top: 30px;
+    transition: 0.4s;
 }
 
-.btn-primary:hover { background: #007bff; }
-
-/* Portafolio - Aquí arreglamos el tamaño de tus fotos */
-#portafolio { 
-    padding: 60px 10%; 
-    background: white; 
-    text-align: center;
+.btn-primary:hover { 
+    background: #fff;
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0, 212, 255, 0.3);
 }
+
+/* Portafolio Mejorado */
+#portafolio { padding: 100px 10%; background: #0a0a0a; }
+#portafolio h2 { text-align: center; font-size: 2.5rem; margin-bottom: 50px; }
 
 .galeria { 
     display: grid; 
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
-    gap: 25px; 
-    margin-top: 40px; 
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
+    gap: 30px; 
 }
 
 .proyecto {
-    background: #eee;
-    border-radius: 12px;
+    border-radius: 15px;
     overflow: hidden;
-    height: 300px; /* Altura fija para que todas se vean iguales */
-    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    height: 350px;
+    border: 1px solid #333;
+    transition: 0.4s;
 }
+
+.proyecto:hover { border-color: #00d4ff; }
 
 .proyecto img { 
     width: 100%; 
     height: 100%; 
-    object-fit: cover; /* Esto evita que se estiren las fotos */
-    transition: transform 0.4s ease;
+    object-fit: cover; 
+    filter: grayscale(30%);
+    transition: 0.5s;
 }
 
-.proyecto img:hover { 
-    transform: scale(1.1); 
-}
+.proyecto:hover img { filter: grayscale(0%); transform: scale(1.05); }
 
-/* Formulario de Cotización */
-#cotizar { 
-    padding: 80px 10%; 
-    background: #f0f0f0; 
-}
+/* Formulario con campo de Teléfono */
+#cotizar { padding: 100px 10%; background: #111; }
+.contenedor-formulario { max-width: 550px; margin: 0 auto; }
 
-.contenedor-formulario { 
-    max-width: 500px; 
-    margin: 0 auto; 
-    text-align: center; 
-}
-
-form { 
-    display: flex; 
-    flex-direction: column; 
-    gap: 15px; 
-    margin-top: 30px; 
-}
-
+form { display: flex; flex-direction: column; gap: 20px; }
 input, select, textarea { 
-    padding: 12px; 
-    border: 1px solid #ccc; 
-    border-radius: 8px; 
+    padding: 15px; 
+    background: #222;
+    border: 1px solid #444; 
+    border-radius: 5px; 
+    color: #fff;
     font-size: 1rem;
 }
+
+input:focus, textarea:focus { outline: none; border-color: #00d4ff; }
 
 .btn-submit { 
-    background: #007bff; 
-    color: white; 
+    background: #00d4ff; 
+    color: #000; 
     border: none; 
-    padding: 15px; 
-    border-radius: 8px; 
+    padding: 18px; 
+    border-radius: 5px; 
     cursor: pointer; 
-    font-weight: bold;
-    font-size: 1rem;
+    font-weight: 900;
+    text-transform: uppercase;
 }
 
-/* Footer */
-footer { 
-    text-align: center; 
-    padding: 40px; 
-    background: white;
-    font-size: 0.9rem; 
-}
-
-/* Responsive (Para Celulares) */
-@media (max-width: 768px) {
-    .hero h1 { font-size: 1.8rem; }
-    nav { flex-direction: column; gap: 15px; }
-}
+footer { text-align: center; padding: 50px; background: #000; color: #555; }
