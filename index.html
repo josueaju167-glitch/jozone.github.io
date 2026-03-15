@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tu Nombre | Diseñador Gráfico</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header>
+        <nav>
+            <div class="logo">TU LOGO</div>
+            <ul>
+                <li><a href="#portafolio">Portafolio</a></li>
+                <li><a href="#cotizar">Cotizar</a></li>
+            </ul>
+        </nav>
+        <div class="hero">
+            <h1>Diseño que comunica, <br><span>resultados que impactan.</span></h1>
+            <p>Especialista en branding y contenido digital para marcas en Guatemala.</p>
+            <a href="#cotizar" class="btn-primary">Solicitar Cotización</a>
+        </div>
+    </header>
+
+    <section id="portafolio">
+        <h2>Mi Portafolio</h2>
+        <div class="galeria">
+            <div class="proyecto"><img src="proyecto1.jpg" alt="Logo Design"></div>
+            <div class="proyecto"><img src="proyecto2.jpg" alt="Social Media"></div>
+            <div class="proyecto"><img src="proyecto3.jpg" alt="Branding"></div>
+        </div>
+    </section>
+
+    <section id="cotizar">
+        <div class="contenedor-formulario">
+            <h2>¿Tienes un proyecto en mente?</h2>
+            <p>Llena los datos y te enviaré una propuesta personalizada.</p>
+            <form action="https://formspree.io/f/TU_ID_AQUÍ" method="POST">
+                <input type="text" name="nombre" placeholder="Tu Nombre" required>
+                <input type="email" name="email" placeholder="Tu Correo" required>
+                <select name="servicio">
+                    <option value="logo">Diseño de Logotipo</option>
+                    <option value="redes">Redes Sociales</option>
+                    <option value="otro">Otro Proyecto</option>
+                </select>
+                <textarea name="mensaje" placeholder="Cuéntame sobre tu proyecto..." required></textarea>
+                <button type="submit" class="btn-submit">Enviar Cotización</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Tu Nombre | Diseñador Gráfico</p>
+    </footer>
+
+</body>
+</html>
