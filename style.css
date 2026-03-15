@@ -13,8 +13,8 @@ nav ul li a { text-decoration: none; color: #333; font-weight: 700; }
 
 #portafolio { padding: 80px 10%; background: white; }
 .galeria { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; margin-top: 40px; }
-.proyecto img { width: 100%; border-radius: 10px; transition: 0.3s; }
-.proyecto img:hover { transform: scale(1.05); }
+.socialmedia.jpg { width: 100%; border-radius: 10px; transition: 0.3s; }
+.logo.jpg:hover { transform: scale(1.05); }
 
 #cotizar { padding: 80px 10%; background: #f0f0f0; }
 .contenedor-formulario { max-width: 600px; margin: 0 auto; text-align: center; }
