@@ -34,22 +34,29 @@
 </section>
 
     <section id="cotizar">
-        <div class="contenedor-formulario">
-            <h2>¿Tienes un proyecto en mente?</h2>
-            <p>Llena los datos y te enviaré una propuesta personalizada.</p>
-           <form action="https://formspree.io/f/xreyapen" method="POST">
-                <input type="text" name="nombre" placeholder="Tu Nombre" required>
-                <input type="email" name="email" placeholder="Tu Correo" required>
-                <select name="servicio">
-                    <option value="logo">Diseño de Logotipo</option>
-                    <option value="redes">Redes Sociales</option>
-                    <option value="otro">Otro Proyecto</option>
-                </select>
-                <textarea name="mensaje" placeholder="Cuéntame sobre tu proyecto..." required></textarea>
-                <button type="submit" class="btn-submit">Enviar Cotización</button>
-            </form>
-        </div>
-    </section>
+    <div class="contenedor-formulario">
+        <h2>¿Listo para empezar?</h2>
+        <p>Déjame tus datos y me pondré en contacto contigo pronto.</p>
+        
+        <form action="https://formspree.io/f/xreyapen" method="POST">
+            <input type="text" name="nombre" placeholder="Nombre Completo" required>
+            <input type="email" name="email" placeholder="Correo Electrónico" required>
+            
+            <input type="tel" name="telefono" placeholder="WhatsApp / Teléfono (Opcional)">
+            
+            <select name="servicio">
+                <option value="logo">Diseño de Logotipo</option>
+                <option value="redes">Gestión de Redes Sociales</option>
+                <option value="branding">Identidad de Marca (Branding)</option>
+                <option value="otro">Otro Proyecto</option>
+            </select>
+            
+            <textarea name="mensaje" rows="5" placeholder="Cuéntame un poco sobre tu idea..." required></textarea>
+            
+            <button type="submit" class="btn-submit">Enviar Cotización</button>
+        </form>
+    </div>
+</section>
 
     <footer>
         <p>&copy; 2026 Tu Nombre | Diseñador Gráfico</p>
