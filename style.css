@@ -133,21 +133,35 @@ input, select, textarea { padding: 15px; background: #222; border: 1px solid #44
 @media (max-width: 768px) {
     nav { padding: 1.5rem 5%; }
     .logo { font-size: 1.3rem; }
-    nav ul li { margin-left: 15px; }
+    nav ul li { margin-left: 10px; }
+    nav ul li a { font-size: 0.8rem; }
     
-    .hero { padding: 80px 5%; }
-    .hero h1 { font-size: 2.2rem; }
-    .hero p { font-size: 1rem; margin-bottom: 40px; }
-    .btn-primary { width: 100%; padding: 18px; }
+    .hero { padding: 60px 5%; }
+    .hero h1 { font-size: 2rem; }
+    .hero p { font-size: 0.95rem; margin-bottom: 35px; }
+    .btn-primary { width: 100%; padding: 16px; font-size: 1rem; }
 
-    /* Desactivar carrusel en móvil y apilar fotos */
+    /* Ajuste para que salgan de 2 en 2 */
     .galeria-movimiento {
-        animation: none;
-        flex-direction: column;
-        align-items: center;
+        animation: none; /* Sin movimiento */
+        display: grid; /* Usamos rejilla */
+        grid-template-columns: repeat(2, 1fr); /* 2 columnas iguales */
+        gap: 15px; /* Espacio entre fotos */
         width: 100%;
-        gap: 20px;
+        padding: 0 5%;
     }
+    
+    .proyecto {
+        width: 100%; /* Se adaptan al ancho de la columna */
+        height: 160px; /* Altura más pequeña para que quepan bien los pares */
+        border-radius: 8px;
+    }
+
+    /* Ocultamos las imágenes repetidas en el celular para que solo salgan las 6 originales */
+    .galeria-movimiento .proyecto:nth-child(n+7) {
+        display: none;
+    }
+}
     
     .proyecto {
         width: 90%;
