@@ -106,7 +106,9 @@ nav ul li a:hover { color: #00d4ff; }
 .proyecto img { 
     width: 100%; 
     height: 100%; 
-    object-fit: cover; 
+    object-fit: cover; /* CAMBIO: "cover" para que tus imágenes con fondo llenen el cuadro completo */
+    background-color: transparent; /* CAMBIO: Quitamos el fondo blanco de seguridad */
+    padding: 0; /* CAMBIO: Quitamos el aire para que el fondo de tu imagen toque los bordes */
     transition: 0.5s;
 }
 
