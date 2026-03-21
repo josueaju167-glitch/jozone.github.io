@@ -127,30 +127,38 @@ input, select, textarea { padding: 15px; background: #222; border: 1px solid #44
 .btn-submit { background: #00d4ff; color: #000; padding: 20px; font-weight: 900; border: none; cursor: pointer; text-transform: uppercase; transition: 0.3s; }
 .btn-submit:hover { background: #fff; }
 
-/* 6. BOTÓN FLOTANTE DE WHATSAPP (ICONO OFICIAL) */
+/* 6. BOTÓN FLOTANTE DE WHATSAPP (ICONO OFICIAL) - CORREGIDO PARA PC */
 .btn-whatsapp-flotante {
     position: fixed;
-    width: 60px;
-    height: 60px;
+    width: 70px;  /* Un poco más grande para PC */
+    height: 70px; /* Un poco más grande para PC */
     bottom: 30px; 
     right: 30px;  
     background-color: #25d366; 
     color: #fff;
     border-radius: 50px;
     text-align: center;
-    font-size: 35px; 
-    box-shadow: 0px 4px 10px rgba(0,0,0,0.3);
+    box-shadow: 0px 4px 12px rgba(0,0,0,0.4);
     z-index: 1000;
     transition: 0.3s;
     text-decoration: none;
+    
+    /* ESTO ARREGLA EL CENTRADO DEL ICONO */
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
+/* Estilo específico para el icono dentro del botón */
+.btn-whatsapp-flotante i {
+    font-size: 40px; /* Tamaño grande del icono para PC */
+    margin: 0;
+    padding: 0;
+}
+
 .btn-whatsapp-flotante:hover {
     background-color: #1ebea5; 
-    transform: scale(1.1); 
+    transform: scale(1.1) translateY(-5px); /* Efecto de levitación */
 }
 
 /* 7. RESPONSIVE (CELULAR) */
@@ -165,12 +173,15 @@ input, select, textarea { padding: 15px; background: #222; border: 1px solid #44
     .hero p { font-size: 0.95rem; margin-bottom: 35px; }
     .btn-primary { width: 100%; padding: 16px; font-size: 1rem; }
 
-    .btn-whatsapp-flotante {
-        width: 55px;
-        height: 55px;
-        font-size: 30px;
+    ..btn-whatsapp-flotante {
+        width: 60px;
+        height: 60px;
         bottom: 20px;
         right: 20px;
+    }
+    
+    .btn-whatsapp-flotante i {
+        font-size: 32px; /* Icono más pequeño para móvil */
     }
 
     /* Ajuste de 2 en 2 con proporción 1:1 */
